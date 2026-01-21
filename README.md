@@ -39,14 +39,14 @@ Postman example:
 ### 1. Clone the Repository
 
 ``` bash
-git clone https://github.com/rishabkumar7//azure-qr-code.git
+git clone https://github.com/CloudByVenkat/azure-functions-qr-code.git
 cd azure-qr-code/qrCodeGenerator
 ```
 
 ### 2. Install Dependencies
 
 ```bash
-npm install
+npm install qrcode
 ```
 
 ### 3. Local Configuration
@@ -57,7 +57,7 @@ Set up your `local.settings.json` file with the necessary configuration values:
 {
     "IsEncrypted": false,
     "Values": {
-        "AzureWebJobsStorage": "",
+        "AzureWebJobsStorage": "<YOUR_STORAGE_CONNECTION_STRING>",
         "FUNCTIONS_WORKER_RUNTIME": "node",
 	      "STORAGE_CONNECTION_STRING":"<YOUR_STORAGE_CONNECTION_STRING>"
     }
