@@ -1,22 +1,5 @@
 # Azure QR Code Generator
-
-[![Build and deploy](https://github.com/rishabkumar7/azure-qr-code/actions/workflows/main_qr-code-generator7.yml/badge.svg)](https://github.com/rishabkumar7/azure-qr-code/actions/workflows/main_qr-code-generator7.yml)
-
-
 This repository contains the code for serverless Azure Function that generates QR codes for provided URLs and stores them in Azure Blob Storage. The function is written in JavaScript and can be triggered via HTTP requests.
-
-## Demo
-
-Send a `GET` request to the Azure Function `https://azure-qr-code.azurewebsites.net/api/GenerateQRCode` with `url` as parameter.
-
-`curl` example:
-
-``` bash
-curl -X GET https://azure-qr-code.azurewebsites.net/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'
-```
-
-Postman example:
-![Azure QR Code Generator GIF Postman Example](./assets/azure-qr-code.gif)
 
 ## Architecture
 
@@ -41,7 +24,7 @@ Postman example:
 
 ``` bash
 git clone https://github.com/CloudByVenkat/azure-functions-qr-code.git
-cd azure-qr-code/qrCodeGenerator
+cd azure-functions-qr-code/qrCodeGenerator
 ```
 
 ### 2. Install Dependencies
@@ -64,6 +47,18 @@ Set up your `local.settings.json` file with the necessary configuration values:
     }
 }
 ```
+## Demo
+
+Send a `GET` request to the Azure Function `https://azure-qr-code.azurewebsites.net/api/GenerateQRCode` with `url` as parameter.
+
+`curl` example:
+
+``` bash
+curl -X GET https://azure-qr-code.azurewebsites.net/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'
+```
+
+Postman example:
+![Azure QR Code Generator GIF Postman Example](./assets/azure-qr-code.gif)
 
 ### 4. Running Locally
 
@@ -84,6 +79,6 @@ func azure functionapp publish <YOUR_FUNCTION_APP_NAME>
 ## Usage
 
 Send a `GET` request to your function's endpoint with a JSON payload containing the URL:
-
+`https://<YOUR_FUNCTION_URL>/api/generateqrcode?url=https:<YOUR_URL>`
 `curl -X GET https://<YOUR_FUNCTION_URL>/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'`
 
