@@ -1,0 +1,1 @@
+Please find the terraform configuration files to create azure function. Please update your credentials in terraform.tfvars and run the terraform plan.
