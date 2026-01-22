@@ -31,10 +31,12 @@ resource "azurerm_linux_function_app" "day18_linux_function_app" {
 
   site_config {
     application_stack {
-        node_version = "22"
+        node_version = "20"
     }
   }
   app_settings = {
+    STORAGE_CONNECTION_STRING  = azurerm_storage_account.day18_storage_account.primary_connection_string
+    AzureWebJobsStorage        = azurerm_storage_account.day18_storage_account.primary_connection_string
     "FUNCTIONS_WORKER_RUNTIME" = "node"
     "WEBSITE_RUN_FROM_PACKAGE" = "1"
 }
