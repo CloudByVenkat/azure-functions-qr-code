@@ -80,6 +80,6 @@ Postman example:
 ## Usage
 
 Send a `GET` request to your function's endpoint with a JSON payload containing the URL:
-`https://<YOUR_FUNCTION_URL>/api/generateqrcode?url=https:<YOUR_URL>`
+`https://<YOUR_FUNCTION_URL>/api/generateqrcode?url=https:<YOUR_URL>`.
 `curl -X GET https://<YOUR_FUNCTION_URL>/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'`
 
