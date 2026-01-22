@@ -47,19 +47,6 @@ Set up your `local.settings.json` file with the necessary configuration values:
     }
 }
 ```
-## Demo
-
-Send a `GET` request to the Azure Function `https://azure-qr-code.azurewebsites.net/api/GenerateQRCode` with `url` as parameter.
-
-`curl` example:
-
-``` bash
-curl -X GET https://azure-qr-code.azurewebsites.net/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'
-```
-
-Postman example:
-![Azure QR Code Generator GIF Postman Example](./assets/azure-qr-code.gif)
-
 ### 4. Running Locally
 
 To start the function app locally, make sure you have Azure Functions Core Tools installed, then run:
@@ -75,6 +62,20 @@ Deploy your function app to Azure using the following command:
 ```bash
 func azure functionapp publish <YOUR_FUNCTION_APP_NAME>
 ```
+
+## Demo
+
+Send a `GET` request to the Azure Function `https://azure-qr-code.azurewebsites.net/api/GenerateQRCode` with `url` as parameter.
+
+`curl` example:
+
+``` bash
+curl -X GET https://azure-qr-code.azurewebsites.net/api/GenerateQRCode -H "Content-Type: application/json" -d '{"url":"https://www.example.com"}'
+```
+
+Postman example:
+![Azure QR Code Generator GIF Postman Example](./assets/azure-qr-code.gif)
+
 
 ## Usage
 
