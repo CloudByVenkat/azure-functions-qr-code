@@ -49,12 +49,13 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_85348492AC52414D91922CEDFF2CEA41 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_EA2DCD5478064C4D96C8A163EB7CB9C5 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_816F7E5124D041A692931825500741B5 }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'trivweb'
           package: .
+
